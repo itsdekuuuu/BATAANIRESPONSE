@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImportMunicipals">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/importMunicipalBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill"
+        android:background="@color/sky"
+        android:fontFamily="@font/robotobold"
+        android:text="Import MUNICIPALS (CSV)"
+        android:textColor="@color/white" />
+
+</FrameLayout>

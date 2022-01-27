@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    android:layout_marginVertical="32dp"
+    tools:context=".Resident.AddReport">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/robotobold"
+                android:text="ADD REPORT"
+                android:textColor="@color/sky"
+                android:textSize="30dp" />
+
+            <LinearLayout
+                android:id="@+id/pageLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/robodoreg"
+                    android:text="Location of incident"
+                    android:textColor="@color/sky"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/municipalitySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/et"
+                        android:fontFamily="@font/robodoreg"
+                        android:hint="Incident Classification"
+                        android:inputType="text"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:textColor="#153734"
+                        android:textColorHint="@color/sky" />
+
+                    <Spinner
+                        android:id="@+id/brgySpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/et"
+                        android:fontFamily="@font/robodoreg"
+                        android:hint="Incident Classification"
+                        android:inputType="text"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:textColor="#153734"
+                        android:textColorHint="@color/sky" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/whatTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:fontFamily="@font/robodoreg"
+                    android:hint="Location Details (Street,etc.)"
+                    android:inputType="text"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+                <EditText
+                    android:id="@+id/fromTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/robodoreg"
+                    android:hint="Incident date"
+                    android:inputType="text"
+                    android:onClick="onDateClick"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+                <EditText
+                    android:id="@+id/toTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/robodoreg"
+                    android:hint="Incident Time"
+                    android:inputType="text"
+                    android:onClick="timeClick"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pageLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Spinner
+                    android:id="@+id/classification"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:fontFamily="@font/qsemib"
+                    android:hint="Incident Classification"
+                    android:inputType="text"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+                <Spinner
+                    android:id="@+id/classificationType"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:fontFamily="@font/qsemib"
+                    android:hint="Incident Classification"
+                    android:inputType="text"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+                <EditText
+                    android:id="@+id/eventDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:fontFamily="@font/qsemib"
+                    android:gravity="top|left"
+                    android:hint="Incident Description"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pageLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/whenTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:fontFamily="@font/qsemib"
+                    android:hint="Number of People Involve (Optional)"
+                    android:inputType="number"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+                <EditText
+                    android:id="@+id/namesOfPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et"
+                    android:fontFamily="@font/qsemib"
+                    android:gravity="top|left"
+                    android:hint="Specify Names (Optional)"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pageLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/choose_image_report"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/robotobold"
+                    android:onClick="onNextPage"
+                    android:text="Choose Image"
+                    android:textColor="@color/white"
+                    app:cornerRadius="25dp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TableRow
+                                android:id="@+id/report_images"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/prevBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/robotobold"
+                    android:onClick="onPrevPage"
+                    android:text="Prev"
+                    android:textColor="@color/white"
+                    app:cornerRadius="25dp" />
+
+                <Button
+                    android:id="@+id/nextBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/robotobold"
+                    android:onClick="onNextPage"
+                    android:text="Next"
+                    android:textColor="@color/white"
+                    app:cornerRadius="25dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/repsubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    app:cornerRadius="25dp" />
+
+                <Button
+                    android:id="@+id/repback"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    app:cornerRadius="25dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

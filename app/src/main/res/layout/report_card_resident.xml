@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_margin="8dp"
+    android:padding="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:fontFamily="@font/robotobold"
+                    android:textFontWeight="700"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Level"
+                    android:fontFamily="@font/robotobold"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:fontFamily="@font/robotobold"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Involve"
+                    android:fontFamily="@font/robotobold"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Names"
+                    android:fontFamily="@font/robotobold"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="When"
+                    android:fontFamily="@font/robotobold"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:fontFamily="@font/robotobold"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/report_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/report_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Level"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/report_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/report_involve"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Involve"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/report_names"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Names"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:scrollbars="horizontal"
+                    />
+
+                <TextView
+                    android:id="@+id/report_when"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="When"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/report_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:scrollbars="vertical"
+                    android:maxLines="3" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_viewImage"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTint="#2196F3"
+                android:text="View"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_image"
+                app:iconTint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_editReport"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                android:backgroundTint="#2196F3"
+                android:text="Edit"
+                android:textColor="@color/white"
+                app:icon="@drawable/ic_edit"
+                app:iconTint="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

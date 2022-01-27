@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bataanresponse">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- get internet connection permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo1_round"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_logo1_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BataanResponse">
+        <activity
+            android:name=".ViewBarangayAdmins"
+            android:exported="true" />
+        <activity
+            android:name=".TownAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".Resident.BarangayViewEvents"
+            android:exported="true" />
+        <activity android:name=".Applicant" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".notification.MainKotlinApp" />
+        <!--
+         Set custom default icon. This is used when no icon is set for incoming notification messages.
+                See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_logo1_round" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <!--
+Enable later for API > 26 and android 8.0
+                <meta-data
+                    android:name="com.google.firebase.messaging.default_notification_channel_id"
+                    android:value="@string/default_notification_channel_id" />
+        -->
+        <activity android:name=".ViewResident" />
+        <activity
+            android:name=".Resident.EditProfile"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/Theme.BataanResponse.NoActionBar" />
+        <activity android:name=".TestMain" />
+        <activity android:name=".GoogleMapSearch" />
+        <activity
+            android:name=".ViewReports"
+            android:exported="true" />
+        <activity android:name=".Resident.AddReport" />
+        <activity android:name=".Resident.ViewEvents" />
+        <activity android:name=".AddEvent" />
+        <activity android:name=".Resident.Res_Login" />
+        <activity android:name=".Resident.Res_Signup" />
+        <activity android:name=".Resident.Res_Home" />
+        <activity android:name=".Brgy_Login" />
+        <activity android:name=".Brgy_Home" />
+        <activity android:name=".Brgy_Signup" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Resident.ViewNotifications" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".notification.FirebaseService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

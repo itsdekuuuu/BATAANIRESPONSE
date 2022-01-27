@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:id="@+id/pageLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Edit Event"
+            android:textColor="@color/sky"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <EditText
+            android:id="@+id/txt_event_what"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/et"
+            android:fontFamily="@font/robodoreg"
+            android:hint="What"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="#153734"
+            android:textColorHint="@color/sky" />
+
+        <EditText
+            android:id="@+id/txt_event_where"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/et"
+            android:fontFamily="@font/robodoreg"
+            android:hint="Where"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="#153734"
+            android:textColorHint="@color/sky" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/fromTxt"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/et"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/robodoreg"
+                android:hint="From"
+                android:inputType="text"
+                android:onClick="timeClick"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#153734"
+                android:textColorHint="@color/sky" />
+
+            <EditText
+                android:id="@+id/toTxt"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/et"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/robodoreg"
+                android:hint="To"
+                android:inputType="text"
+                android:onClick="timeClick"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#153734"
+                android:textColorHint="@color/sky" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pageLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pageLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/txt_event_description"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/et"
+            android:fontFamily="@font/robodoreg"
+            android:gravity="top|left"
+            android:hint="Event Description"
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textColor="#153734"
+            android:textColorHint="@color/sky" />
+
+        <EditText
+            android:id="@+id/txt_event_when"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/et"
+            android:fontFamily="@font/robodoreg"
+            android:hint="When"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:cursorVisible="false"
+            android:inputType="number"
+            android:onClick="onWhenClick"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="#153734"
+            android:textColorHint="@color/sky" />
+
+    </LinearLayout>
+</LinearLayout>

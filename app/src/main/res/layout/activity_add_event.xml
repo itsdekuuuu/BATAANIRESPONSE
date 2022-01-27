@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    tools:context=".AddEvent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/adminname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/robotobold"
+                android:text="BARANGAY"
+                android:textColor="@color/sky"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/robotobold"
+                android:text="Announcement"
+                android:textColor="@color/sky"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/what"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/et"
+                android:fontFamily="@font/robodoreg"
+                android:hint="What"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#153734"
+                android:textColorHint="@color/sky" />
+
+            <EditText
+                android:id="@+id/where"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/et"
+                android:fontFamily="@font/robodoreg"
+                android:hint="Where"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#153734"
+                android:textColorHint="@color/sky" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fromTimeTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/robodoreg"
+                    android:hint="From"
+                    android:inputType="text"
+                    android:onClick="fromTimeClick"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+                <EditText
+                    android:id="@+id/toTimeTxt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/robodoreg"
+                    android:hint="To"
+                    android:inputType="text"
+                    android:onClick="fromTimeClick"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/when"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/et"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/robodoreg"
+                    android:hint="When"
+                    android:inputType="text"
+                    android:onClick="onWhenClick"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textColor="#153734"
+                    android:textColorHint="@color/sky" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/des"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/et"
+                android:fontFamily="@font/robodoreg"
+                android:gravity="top|left"
+                android:hint="Description..."
+                android:inputType="textMultiLine"
+                android:padding="12dp"
+                android:textAlignment="textStart"
+                android:textColor="#153734"
+                android:textColorHint="@color/sky"
+                tools:ignore="RtlCompat" />
+
+
+            <Button
+                android:id="@+id/choose_image"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/robotobold"
+                android:text="Choose Image"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:cornerRadius="25dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:id="@+id/event_images_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="20dp">
+
+                    <TableRow
+                        android:id="@+id/event_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="10dp">
+
+                    </TableRow>
+
+                    </TableLayout>
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/robotobold"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:cornerRadius="25dp" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:background="#00000000"
+                android:fontFamily="@font/robotobold"
+                android:text="Back"
+                android:textColor="#000" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="what" type="id" />
+    <item name="when" type="id" />
+    <item name="where" type="id" />
+    <item name="editTextTextMultiLine" type="id" />
+    <item name="submit" type="id" />
+</resources>

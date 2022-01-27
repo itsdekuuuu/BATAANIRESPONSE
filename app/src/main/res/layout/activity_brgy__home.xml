@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/sky"
+    android:gravity="center"
+    android:weightSum="4"
+    tools:context=".Brgy_Home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+
+        <ImageView
+            android:layout_width="251dp"
+            android:layout_height="228dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="220dp"
+            android:src="@drawable/homeb1" />
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/robotobold"
+            android:text="BARANGAY HOME"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="3"
+        android:background="@drawable/card_background"
+        android:elevation="36dp">
+
+    <GridLayout
+        android:id="@+id/firstPage"
+        android:layout_width="match_parent"
+        android:layout_height="424dp"
+        android:layout_margin="10sp"
+        android:columnCount="1"
+        android:rowCount="3"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_columnWeight="0"
+            android:layout_marginTop="50dp"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/viewResidentsBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:background="@color/sky"
+                android:fontFamily="@font/qsemib"
+                android:text="Residents Information"
+                android:textColor="@color/white" />
+
+            <fragment
+                android:id="@+id/importMunicipal"
+                android:name="com.example.bataanresponse.ImportMunicipals"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/viewApplicants"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:background="@color/sky"
+                android:fontFamily="@font/qsemib"
+                android:onClick="onViewApplicants"
+                android:text="Resident Account Request"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/secondPage"
+        android:layout_width="match_parent"
+        android:layout_height="424dp"
+        android:layout_margin="10sp"
+        android:columnCount="1"
+        android:rowCount="3"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="0"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <fragment
+                android:id="@+id/importUserFragment"
+                android:name="com.example.bataanresponse.FileChooserFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1" />
+
+            <fragment
+                android:id="@+id/importBaranggay"
+                android:name="com.example.bataanresponse.ImportBaranggay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="0"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/postevent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:background="@color/sky"
+                android:fontFamily="@font/robotobold"
+                android:text="Post Event"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/viewrep"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@color/sky"
+                android:fontFamily="@font/robotobold"
+                android:text="View Reports"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="0"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/viewevents"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@color/sky"
+                android:fontFamily="@font/robotobold"
+                android:text="View Events"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/editprodf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:background="@color/sky"
+                android:fontFamily="@font/robotobold"
+                android:onClick="onClickEditProfile"
+                android:text="Edit Profile"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="80dp"
+            android:layout_weight="1"
+            android:background="@color/sky"
+            android:fontFamily="@font/robotobold"
+            android:gravity="center"
+            android:text="Logout"
+            android:textColor="@color/white"
+            app:cornerRadius="25dp" />
+
+        <Button
+            android:id="@+id/logout3"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/sky"
+            android:fontFamily="@font/robotobold"
+            android:gravity="center"
+            android:onClick="onNextPage"
+            android:text="switch page"
+            android:textColor="@color/white"
+            app:cornerRadius="25dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

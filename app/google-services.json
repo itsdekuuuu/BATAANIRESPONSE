@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1016927101773",
+    "project_id": "ibataanresponse",
+    "storage_bucket": "ibataanresponse.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016927101773:android:1660292d2e05a5c6764d04",
+        "android_client_info": {
+          "package_name": "com.example.bataanresponse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016927101773-tsjapb16u67rcgr2suts8bbbaflm0rso.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOUEdVLNAgqeJAdy9FlEVY5dZpidT-PEQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016927101773-tsjapb16u67rcgr2suts8bbbaflm0rso.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
